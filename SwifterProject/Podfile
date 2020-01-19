@@ -1,0 +1,37 @@
+source 'https://gitee.com/safiri/safiriRepo.git'
+source 'https://github.com/CocoaPods/Specs.git'
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'SwifterProject' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  #pod 'Alamofire'
+  #pod 'SwiftyRSA'
+  #pod 'SwiftyJSON'
+  #pod 'HandyJSON'
+  #pod 'Kingfisher'
+  #pod 'RxSwift'
+  #pod 'RxCocoa'
+  #pod 'Hue'
+  #pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+  #pod 'IBAnimatable'
+  #pod 'WCDB.swift'
+  #pod 'FSPagerView'
+  #pod 'IQKeyboardManagerSwift'
+  pod 'SnapKit'
+  #pod 'swiftScan' 1.1.5出错 本项目是swift4.2
+
+
+  #OC
+  
+  #pod 'SVProgressHUD' delete
+  #pod 'MJRefresh', '~> 3.2.3'
+  #pod 'TZImagePickerController'
+  #pod 'ZSWKWebViewVC/Base'
+  #pod 'MBProgressHUD'
+  #pod 'ZSDependencyCategory/UIViewController+MBProgressHUD'
+  # Pods for LogisticsDriver
+
+end
