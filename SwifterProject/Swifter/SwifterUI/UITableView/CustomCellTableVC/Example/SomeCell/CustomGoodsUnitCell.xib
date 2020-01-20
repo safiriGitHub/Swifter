@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="CustomGoodsUnitCell" customModule="LogisticsCargoOwner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rz-xinghao" translatesAutoresizingMaskIntoConstraints="NO" id="enR-4K-CUf">
+                        <rect key="frame" x="7" y="19" width="6" height="6"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="货物单位" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCv-rp-xY1">
+                        <rect key="frame" x="20" y="13" width="61.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGd-1a-bLZ">
+                        <rect key="frame" x="141" y="9" width="40" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="L7s-l0-yIj"/>
+                            <constraint firstAttribute="height" constant="26" id="aCl-8M-rlA"/>
+                        </constraints>
+                        <state key="normal" title="吨">
+                            <color key="titleColor" red="0.36862745099999999" green="0.1647058824" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="tonButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="frW-YY-IEp"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xi-4I-NWq">
+                        <rect key="frame" x="191" y="9" width="64" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="64" id="1cr-4g-CcQ"/>
+                            <constraint firstAttribute="height" constant="26" id="HUQ-2B-o0c"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="立方米">
+                            <color key="titleColor" red="0.36862745099999999" green="0.1647058824" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="CubicmetersButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="g2X-wU-XQz"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tf-1f-MEK">
+                        <rect key="frame" x="265" y="9" width="40" height="26"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="f94-Na-aVr"/>
+                            <constraint firstAttribute="width" constant="40" id="mod-1Z-xec"/>
+                        </constraints>
+                        <state key="normal" title="车">
+                            <color key="titleColor" red="0.36862745099999999" green="0.1647058824" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="CarButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="EhL-sf-GPF"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GCv-rp-xY1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="4eJ-o3-4b0"/>
+                    <constraint firstItem="PGd-1a-bLZ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7T1-IR-05V"/>
+                    <constraint firstItem="enR-4K-CUf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="BaY-iG-O1p"/>
+                    <constraint firstItem="8tf-1f-MEK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="G3d-7E-3cK"/>
+                    <constraint firstItem="4xi-4I-NWq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="T6X-xa-6io"/>
+                    <constraint firstAttribute="trailing" secondItem="8tf-1f-MEK" secondAttribute="trailing" constant="15" id="Uuy-fU-Kbl"/>
+                    <constraint firstItem="4xi-4I-NWq" firstAttribute="leading" secondItem="PGd-1a-bLZ" secondAttribute="trailing" constant="10" id="ZsL-2o-evs"/>
+                    <constraint firstItem="enR-4K-CUf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mYj-AT-Bkd"/>
+                    <constraint firstItem="8tf-1f-MEK" firstAttribute="leading" secondItem="4xi-4I-NWq" secondAttribute="trailing" constant="10" id="o46-bR-DYo"/>
+                    <constraint firstItem="GCv-rp-xY1" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qnn-nP-4Lu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="CarButton" destination="8tf-1f-MEK" id="nhm-Hc-dff"/>
+                <outlet property="CubicmetersButton" destination="4xi-4I-NWq" id="iHU-0a-9Ey"/>
+                <outlet property="tonButton" destination="PGd-1a-bLZ" id="lUe-CT-O9D"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="78"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="rz-xinghao" width="6" height="6"/>
+    </resources>
+</document>

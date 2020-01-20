@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ConversionRateCell" customModule="LogisticsCargoOwner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rz-xinghao" translatesAutoresizingMaskIntoConstraints="NO" id="nI8-x2-9V3">
+                        <rect key="frame" x="7" y="19" width="6" height="6"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="换算率" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-ch-79X">
+                        <rect key="frame" x="20" y="13" width="46" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxF-F7-swb">
+                        <rect key="frame" x="76" y="15.5" width="13" height="13"/>
+                        <state key="normal" backgroundImage="goods-conversionRate"/>
+                        <connections>
+                            <action selector="introduceButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GMa-Y9-mo6"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入换算率" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CMW-j0-sep">
+                        <rect key="frame" x="109" y="0.0" width="196" height="44"/>
+                        <color key="tintColor" red="0.36862745099999999" green="0.1647058824" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.22352941179999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CMW-j0-sep" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4fv-VZ-dZT"/>
+                    <constraint firstItem="RxF-F7-swb" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7j3-Oc-aOF"/>
+                    <constraint firstItem="RxF-F7-swb" firstAttribute="leading" secondItem="Fch-ch-79X" secondAttribute="trailing" constant="10" id="Joi-Kp-M9e"/>
+                    <constraint firstItem="Fch-ch-79X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="OVK-HK-sjy"/>
+                    <constraint firstAttribute="bottom" secondItem="CMW-j0-sep" secondAttribute="bottom" id="PgM-fR-i1p"/>
+                    <constraint firstItem="nI8-x2-9V3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="7" id="RgJ-3g-c3x"/>
+                    <constraint firstAttribute="trailing" secondItem="CMW-j0-sep" secondAttribute="trailing" constant="15" id="U7w-2r-8z6"/>
+                    <constraint firstItem="nI8-x2-9V3" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UNe-iF-D06"/>
+                    <constraint firstItem="CMW-j0-sep" firstAttribute="leading" secondItem="RxF-F7-swb" secondAttribute="trailing" constant="20" id="ewh-ok-OaB"/>
+                    <constraint firstItem="Fch-ch-79X" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kDD-UJ-WON"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="inputTF" destination="CMW-j0-sep" id="bUl-gi-QGb"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="85"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="goods-conversionRate" width="13" height="13"/>
+        <image name="rz-xinghao" width="6" height="6"/>
+    </resources>
+</document>

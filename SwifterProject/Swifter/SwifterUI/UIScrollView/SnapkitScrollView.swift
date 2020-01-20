@@ -43,7 +43,7 @@ class SnapKitScrollView: UIScrollView {
     }()
     
     //MARK: - params-private
-    var allPageCount: Int = 0
+    private var allPageCount: Int = 0
     private var lastContentViewWidthConstraint: Constraint?
     private var lastTrailingConstraint: Constraint?
     private var contentViewWidthConstraint: Constraint?
@@ -53,7 +53,7 @@ class SnapKitScrollView: UIScrollView {
     //MARK: - init
     required override init(frame: CGRect) {
         super.init(frame: frame)
-    
+        
     }
     
     required init?(coder: NSCoder) {
@@ -140,6 +140,40 @@ class SnapKitScrollView: UIScrollView {
                 make.leading.trailing.equalToSuperview()
                 make.height.equalTo(0)
             }
+        }
+    }
+    
+    // MARK: - UITableView(UIScrollView)滑动到底部的判断
+    private var scrollToEndCallback: (()->Void)?
+    private var scrollLeaveEndCallback: (()->Void)?
+    private var _isScrollToEnd = false
+    func addScrollToEndObserver(_ callback: (()->Void)?) {
+        scrollToEndCallback = callback
+        addObserver(self, forKeyPath: "contentOffset", options: .new, context: nil)
+    }
+    func addScrollLeaveEndObserver(_ callback: (()->Void)?) {
+        scrollLeaveEndCallback = callback
+    }
+   
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if contentSize.height == 0 {
+            return
+        }
+        let height = frame.size.height
+        let contentYoffset = contentOffset.y
+        let distanceFromBottom = contentSize.height - contentYoffset
+        if distanceFromBottom <= height {
+            //print("滚动到底部了")
+            if !_isScrollToEnd {
+                scrollToEndCallback?()
+            }
+            _isScrollToEnd = true
+        }else {
+            if _isScrollToEnd {
+                scrollLeaveEndCallback?()
+            }
+            _isScrollToEnd = false
+            //print("离开底部了")
         }
     }
 }

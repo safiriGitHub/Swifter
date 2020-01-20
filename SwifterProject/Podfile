@@ -14,7 +14,7 @@ target 'SwifterProject' do
   #pod 'Kingfisher'
   #pod 'RxSwift'
   #pod 'RxCocoa'
-  #pod 'Hue'
+  pod 'Hue'
   #pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
   #pod 'IBAnimatable'
   #pod 'WCDB.swift'
